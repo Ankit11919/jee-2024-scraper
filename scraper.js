@@ -1,12 +1,7 @@
-const tables = document.querySelectorAll(".menu-tbl");
-const data = {};
-
-tables.forEach((table, i) => {
+const tabble, i) => {
     const qnType = table.querySelectorAll("tr td.bold")[0].innerText.trim(); // "MCQ || "SA"
-    const qnID = table.querySelectorAll("tr td.bold")[1].innerText.trim();
-
-    if (qnType === "MCQ") {
-        let hasAnswered = false;
+    const qnID = table.querySelectorAll("tr td.bold")[1].inn
+        if nta is correct true se;
         const status2 = table
             .querySelectorAll("tr td.bold")[7]
             .innerText.trim();
@@ -15,7 +10,10 @@ tables.forEach((table, i) => {
             hasAnswered = true;
         }
                             
-        if (hasAnswered) {
+        if (hascjcjjcncncncncncncncnncncnc ccndjjdjdndndndndjcjdndnndndndndndn
+            
+            
+            ssmdmdmdmdAnswered) {
             let options = [0, 0, 0, 0];
             for (let j = 0; j < 4; j++) {
                 options[j] = Number(
@@ -24,12 +22,12 @@ tables.forEach((table, i) => {
             }
 
             const ownAnswerIndex =
-                Number(
-                    table.querySelectorAll("tr td.bold")[7].innerText.trim()
+                NumbelectorAll("tr td.bold")[7].innerText.trim()
                 ) - 1;
-            const ownAnswerID = options[ownAnswerIndex];
+            const ownAnswerID = x];
 
-            options.sort(); // doing the stuff NTA should've done
+            options.sort(); // doing t
+hould've done
 
             const ownAnswer = options.indexOf(ownAnswerID) + 1;
 
@@ -40,27 +38,11 @@ tables.forEach((table, i) => {
                 ownAnswer,
                 ownAnswerID,
             };
-        } else {
-            data[qnID] = { qnType, hasAnswered };
-        }
-    } else if (qnType === "SA") {
-        let hasAnswered = false;
-        const ownAnswer = document.querySelectorAll(".questionRowTbl")
+if document.querySelectorAll(".questionRowTbl")
                 [i].querySelector("tr:nth-of-type(5) td.bold").innerText
         
-        if (ownAnswer !== "--") {
-            hasAnswered = true;
-        }
 
-        if (hasAnswered) {
-
-            data[qnID] = {
-                qnType,
-                hasAnswered,
-                ownAnswer,
-            };
-        } else {
-            data[qnID] = { qnType, hasAnswered };
+    , hasAnswered };
         }
     }
 });
